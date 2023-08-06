@@ -24,7 +24,7 @@ Begin["`Private`"];
 
 (* TODO: #1 ImportMaxPatcher[path] *)
 ImportMaxPatcher[patcherfile_String] /; FileExistsQ[patcherfile] := Import[patcherfile, "JSON"]
-(* TODO: MaxPatcher *)
+(* TODO: #3 MaxPatcher *)
 (* TODO: MaxObject *)
 
 
