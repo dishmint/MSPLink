@@ -11,9 +11,6 @@ BeginPackage["FaizonZaman`MSPLink`"];
 (*Declare your public symbols here:*)
 
 
-SayHello;
-
-
 Begin["`Private`"];
 
 
@@ -24,8 +21,9 @@ Begin["`Private`"];
 (* ::Text:: *)
 (*Define your public and private symbols here:*)
 
-
-SayHello[name_? StringQ] := "Hello " <> name <> "!";
+(* TODO: ImportMaxPatcher[path] *)
+(* TODO: MaxPatcher *)
+(* TODO: MaxObject *)
 
 
 (* ::Section::Closed:: *)
