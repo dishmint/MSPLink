@@ -37,7 +37,7 @@ ImportMaxPatcher[patcherfile_String] /; FileExistsQ[patcherfile] := Block[
     (* Convert to MaxPatcher *)
     BuildMaxPatcher[patcherJSON, patcherName]
     ]
-(* TODO: MaxObject *)
+(* TODO: #5 MaxObject *)
 
 
 (* ::Section::Closed:: *)
