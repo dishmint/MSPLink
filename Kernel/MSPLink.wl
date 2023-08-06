@@ -10,6 +10,7 @@ BeginPackage["FaizonZaman`MSPLink`"];
 (* ::Text:: *)
 (*Declare your public symbols here:*)
 
+ImportMaxPatcher::usage = "ImportMaxPatcher[path] imports a Max patcher file into Mathematica."
 
 Begin["`Private`"];
 
@@ -22,6 +23,7 @@ Begin["`Private`"];
 (*Define your public and private symbols here:*)
 
 (* TODO: #1 ImportMaxPatcher[path] *)
+ImportMaxPatcher[patcherfile_String] /; FileExistsQ[patcherfile] := Import[patcherfile, "JSON"]
 (* TODO: MaxPatcher *)
 (* TODO: MaxObject *)
 

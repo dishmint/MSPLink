@@ -536,6 +536,12 @@ changed as desired. Use additional cells and cell styles as needed.",
  CellTags->{"ExampleNotebook", "Examples", "TemplateCellGroup"},
  CellID->365974185,ExpressionUUID->"e53ebc35-fe74-40c9-89b5-8ac79df5256c"],
 
+Cell[BoxData[
+ RowBox[{"Quit", "[", "]"}]], "Input", "Excluded",
+ CellChangeTimes->{{3.9002711017475433`*^9, 3.900271102474618*^9}},
+ CellLabel->"In[7]:=",
+ CellID->2036879304,ExpressionUUID->"5e1f9287-b65f-4e71-9e43-53c396223262"],
+
 Cell[CellGroupData[{
 
 Cell[TextData[{
@@ -581,6 +587,7 @@ excluded using ",
  TaggingRules->{"TemplateGroupName" -> "ExampleInitialization"},
  CellTags->{
   "ExampleInitialization", "Initialization for Examples", "TemplateCellGroup"},
+ CellLabel->"In[3]:=",
  CellID->468286435,ExpressionUUID->"542427b7-5867-4112-99c1-c282bb76f034"],
 
 Cell[BoxData[
@@ -588,6 +595,7 @@ Cell[BoxData[
   RowBox[{"PacletDirectoryLoad", "[", 
    RowBox[{"NotebookDirectory", "[", "]"}], "]"}], ";"}]], "Input", "Excluded",
  InitializationCell->True,
+ CellLabel->"In[1]:=",
  CellID->996717066,ExpressionUUID->"c61e5fe7-5e84-4cb7-bbcb-1d8355e8b80e"],
 
 Cell[BoxData[
@@ -595,6 +603,7 @@ Cell[BoxData[
   RowBox[{"Needs", "[", "\"\<FaizonZaman`MSPLink`\>\"", "]"}], 
   ";"}]], "Input", "Excluded",
  InitializationCell->True,
+ CellLabel->"In[2]:=",
  CellID->172764492,ExpressionUUID->"76d5303b-b489-4bb4-b577-7ec81f2555ad"]
 }, Open  ]],
 
@@ -610,27 +619,62 @@ Cell["Show a few simple examples of common uses of the paclet:", "Text",
 Cell[CellGroupData[{
 
 Cell[BoxData[
- TagBox[
-  RowBox[{"MyFunction", "[", 
-   RowBox[{"a", ",", "b", ",", "c"}], "]"}],
-  #& ,
-  TaggingRules -> {"DefaultContentBoxes" -> True},
-  AutoDelete->True]], "Input",
+ RowBox[{"FileNameJoin", "[", 
+  RowBox[{"StringSplit", "[", 
+   RowBox[{
+   "\"\</Users/faizonzaman/Documents/Programs/comp-art/msp/patchset-fez/msp-\
+movements/seq_2023.maxpat\>\"", ",", "\"\</\>\""}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.900271255989381*^9, 3.900271280451913*^9}},
+ CellLabel->"In[4]:=",
+ CellID->945962100,ExpressionUUID->"f295187f-ecef-4ac0-b28f-8c42c5fb9864"],
+
+Cell[BoxData["\<\"Users/faizonzaman/Documents/Programs/comp-art/msp/patchset-\
+fez/msp-movements/seq_2023.maxpat\"\>"], "Output",
+ CellChangeTimes->{3.9002712814903593`*^9},
+ CellLabel->"Out[4]=",
+ CellID->130951290,ExpressionUUID->"03e3bde0-5ef6-420a-8cf6-03b874ccaed3"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ImportMaxPatcher", "[", 
+  RowBox[{"FileNameJoin", "[", 
+   RowBox[{"StringSplit", "[", 
+    RowBox[{
+    "\"\</Users/faizonzaman/Documents/Programs/comp-art/msp/patchset-fez/msp-\
+movements/seq_2023.maxpat\>\"", ",", "\"\</\>\""}], "]"}], "]"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.900271121607123*^9, 3.900271125178091*^9}, {
+   3.90027123782351*^9, 3.900271240645426*^9}, 3.900271288251011*^9},
  CellTags->"DefaultContent",
- CellLabel->"In[1]:=",
+ CellLabel->"In[5]:=",
  CellID->593829399,ExpressionUUID->"e26d4d24-7f50-4eb2-b979-d0031a4aaec6"],
 
 Cell[BoxData[
- TagBox[
-  FractionBox[
-   SuperscriptBox["a", "2"], 
-   RowBox[{"b", "+", "c"}]],
-  #& ,
-  TaggingRules -> {"DefaultContentBoxes" -> True},
-  AutoDelete->True]], "Output",
+ RowBox[{"ImportMaxPatcher", 
+  "[", "\<\"Users/faizonzaman/Documents/Programs/comp-art/msp/patchset-fez/\
+msp-movements/seq_2023.maxpat\"\>", "]"}]], "Output",
+ CellChangeTimes->{3.900271245271983*^9, 3.900271289495243*^9},
  CellTags->"DefaultContent",
- CellLabel->"Out[1]=",
- CellID->197444189,ExpressionUUID->"15630b0b-9ea6-43e9-8612-3534302153e2"]
+ CellLabel->"Out[5]=",
+ CellID->2081810629,ExpressionUUID->"c587954a-c0e3-4094-8f8d-82eb070cca97"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FileExistsQ", "[", 
+  "\"\</Users/faizonzaman/Documents/Programs/comp-art/msp/patchset-fez/msp-\
+movements/seq_2023.maxpat\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.900271302436077*^9, 3.9002713055059633`*^9}},
+ CellLabel->"In[6]:=",
+ CellID->1012739666,ExpressionUUID->"1b969ed7-941e-48fc-a258-d2de3f894e16"],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{3.900271305893199*^9},
+ CellLabel->"Out[6]=",
+ CellID->1347804411,ExpressionUUID->"91b82e7a-480d-4811-a05d-d76f6ed7e95a"]
 }, Open  ]]
 }, Open  ]],
 
@@ -5467,7 +5511,8 @@ Fu6DuJJG2H9mK2QZ3X1Y8rjKVdsLU11Qbnfn/Mae/TiO1RZHs2bny+6Vwq5Sfi8TnHKi+1+K4NOh"]\
     "DefaultContentMethod" -> "Tagged", "HintPods" -> True, "LoadingMethod" -> 
     "Paclet", "PacletName" -> "PacletResource", "SourceID" -> 
     "8f99c2b0ee5e9f24d331c183562e905b4bbb1a6f"}, "ToolsOpen" -> True, 
-  "StatusMessage" -> "", "SubmissionReviewData" -> {"Review" -> False}},
+  "StatusMessage" -> "", "SubmissionReviewData" -> {"Review" -> False}, 
+  "AutoUpdate" -> True},
 CreateCellID->True,
 DynamicEvaluationTimeout->60,
 FrontEndVersion->"13.3 for Mac OS X ARM (64-bit) (June 3, 2023)",
@@ -5748,7 +5793,6 @@ VX/aMEEQzrerjFhhelYAzofFB3r8AgApYdcE
                    15.75, 5.25}, {6.75, 5.25}, {6.75, 17.25}, {8.25, 17.25}, {
                    8.25, 18.}}, {{9.75, 17.25}, {12.75, 17.25}, {12.75, 
                    16.5}, {9.75, 16.5}}}], 
-                 
                  FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 
                   0}, {0, 1, 0}, {0, 1, 0}}, {{0, 2, 0}, {0, 1, 0}, {0, 1, 
                   0}}, {{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{8.25, 14.25}, {
