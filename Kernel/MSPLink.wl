@@ -28,7 +28,6 @@ Needs["FaizonZaman`MSPLink`MaxPatcher`"];
 (* ::Text:: *)
 (*Define your public and private symbols here:*)
 
-(* TODO: #1 ImportMaxPatcher[path] *)
 ImportMaxPatcher[patcherfile_String] /; FileExistsQ[patcherfile] := Block[
     {patcherName, patcherJSON},
     (* Store patcher name *)
@@ -38,7 +37,6 @@ ImportMaxPatcher[patcherfile_String] /; FileExistsQ[patcherfile] := Block[
     (* Convert to MaxPatcher *)
     BuildMaxPatcher[patcherJSON, patcherName]
     ]
-(* TODO: #3 MaxPatcher *)
 (* TODO: MaxObject *)
 
 
