@@ -21,7 +21,7 @@ Begin["`Private`"];
 (* ::Text:: *)
 (*Define your public and private symbols here:*)
 
-(* TODO: ImportMaxPatcher[path] *)
+(* TODO: #1 ImportMaxPatcher[path] *)
 (* TODO: MaxPatcher *)
 (* TODO: MaxObject *)
 
