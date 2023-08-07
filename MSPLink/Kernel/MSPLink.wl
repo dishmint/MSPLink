@@ -18,8 +18,8 @@ MaxPatcherQ::usage = "MaxPatcherQ[maxpatcher] tests whether maxpatcher is a vali
 $SampleMaxPatcher::usage = "A sample Max patcher file";
 
 MaxObject::usage = "MaxObject[assoc] represents a max object in symbolic form."
-MaxObjectQ::usage = "MaxObjectQ[maxobject] tests whether maxobject is a valid MaxObject." (* TODO: Flesh out MaxObjectQ documentation *)
-MaxObjectLookup::usage = "MaxObjectLookup[maxobject, key] returns the value of key in maxobject." (* TODO: Flesh out MaxObjectLookup documentation *)
+MaxObjectQ::usage = "MaxObjectQ[maxobject] tests whether maxobject is a valid MaxObject." (* TODO: #7 Flesh out MaxObjectQ documentation *)
+MaxObjectLookup::usage = "MaxObjectLookup[maxobject, key] returns the value of key in maxobject." (* TODO: #8 Flesh out MaxObjectLookup documentation *)
 GetMaxObject::usage = "GetMaxObject[boxes, id] returns the max object with the given id from the list of boxes."
 
 MaxPatcherGraph::usage = "MaxPatcherGraph[maxpatcher] returns a graph representation of maxpatcher."

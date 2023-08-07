@@ -15,7 +15,6 @@ ProcessMaxPatcherData[data: KeyValuePattern[{"boxes"->_, "lines"->_}]]:= Block[
     lines //= iProcessMaxPatcherData["lines", boxes, #]&;
     <| "boxes" -> boxes, "lines" -> lines |>
     ]
-(* ProcessMaxPatcherData[dataKey_String, data_]:= dataKey -> iProcessMaxPatcherData[dataKey, data] *)
 
 iProcessMaxPatcherData["boxes", data_]:= Map[FaizonZaman`MSPLink`MaxObject, Lookup[data, "box"]]
 
@@ -49,7 +48,6 @@ GetMaxPatcherData[patcherAssoc: KeyValuePattern[{"patcher" -> _}]]:= Block[
 GetMaxPatcherMetaInformation[patcherAssoc: KeyValuePattern[{"patcher" -> _}]]:= patcherAssoc // Lookup["patcher"] // KeySelect[Not@*MatchQ["boxes" | "lines"]]
 
 Default[BuildMaxPatcher, 2] = None;
-(* TODO: use ImportedMaxPatcherAssociationQ to check the arguments here *)
 BuildMaxPatcher[patcherJSON: KeyValuePattern[{"patcher" -> _}], patcherName_.] := Block[
     {
         patcherAssociation,
@@ -64,7 +62,7 @@ BuildMaxPatcher[patcherJSON: KeyValuePattern[{"patcher" -> _}], patcherName_.] :
     FaizonZaman`MSPLink`MaxPatcher[Append[data, <| MetaInformation -> metaInformation |>]]
     ]
 
-(* TODO: Fix cutoff disks *)
+(* TODO: Fix vertex shapes being cut off *)
 MaxObjectShapeFunction[{xc_, yc_}, name_, {w_, h_}] := Block[
     {xmin = xc - w, xmax = xc + w, ymin = yc - h, ymax = yc + h},
     Inset[
