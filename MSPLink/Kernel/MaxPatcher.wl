@@ -9,7 +9,7 @@ $Max8Logo = PacletExtensionFiles[PacletObject["FaizonZaman/MSPLink"], "Assets"] 
 $MaxPatcherIcon = Graphics[{$Max8Logo}, ImageSize -> Dynamic[{Automatic, 3.5 CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[Magnification]}]];
 
 $MaxVersionTemplate = StringTemplate["`major`.`minor`.`revision`"];
-(* TODO: Create default MetaInformation for MaxPatcher objects *)
+(* TODO: #12 Create default MetaInformation for MaxPatcher objects *)
 $DefaultMaxPatcherMetaInformation = {};
 
 FaizonZaman`MSPLink`MaxPatcher /: MakeBoxes[obj : FaizonZaman`MSPLink`MaxPatcher[asc_?MaxPatcherObjectAscQ], form : (StandardForm | TraditionalForm)] := 

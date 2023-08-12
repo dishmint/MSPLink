@@ -62,7 +62,7 @@ BuildMaxPatcher[patcherJSON: KeyValuePattern[{"patcher" -> _}], patcherName_.] :
     FaizonZaman`MSPLink`MaxPatcher[Append[data, <| MetaInformation -> metaInformation |>]]
     ]
 
-(* TODO: Fix vertex shapes being cut off *)
+(* TODO: #13 Fix vertex shapes being cut off in MaxPatcherGraph *)
 MaxObjectShapeFunction[{xc_, yc_}, name_, {w_, h_}] := Block[
     {xmin = xc - w, xmax = xc + w, ymin = yc - h, ymax = yc + h},
     Inset[
@@ -73,7 +73,7 @@ MaxObjectShapeFunction[{xc_, yc_}, name_, {w_, h_}] := Block[
         ]
     ];
 
-(* TODO: Better rendering of object rectangles *)
+(* TODO: #14 Better rendering of object rectangles *)
 (* FaizonZaman`MSPLink`MaxObjectShapeFunction[{xc_, yc_}, name_, {w_, h_}] := Block[
     {xmin = xc - w, xmax = xc + w, ymin = yc - h, ymax = yc + h},
     Inset[Tooltip[Graphics[{Directive[White, EdgeForm[Black]], name["Rectangle"]}], name], {xc,yc}, Automatic, Dynamic[0.0225 CurrentValue["FontMWidth"]/AbsoluteCurrentValue[Magnification]]]

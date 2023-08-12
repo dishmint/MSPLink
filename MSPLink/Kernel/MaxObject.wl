@@ -9,7 +9,7 @@ Needs["PacletTools`"];
 $MaxObjectImage = PacletExtensionFiles[PacletObject["FaizonZaman/MSPLink"], "Assets"] // Values/*Flatten/*Select[StringEndsQ["max_object.png"]]/*First // Import;
 $MaxObjectIcon = Graphics[{$MaxObjectImage}, ImageSize -> Dynamic[{Automatic, 3.5 CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[Magnification]}]];
 
-(* TODO: Create default MetaInformation for MaxObjects *)
+(* TODO: #11 Create default MetaInformation for MaxObjects *)
 $DefaultMaxObjectMetaInformation = {};
 
 keyrules = {"id" -> "ID", "maxclass" -> "MaxClass", "numinlets" -> "Inlets", "numoutlets" -> "Outlets", "outlettype" -> "OutletType", "patching_rect" -> "Rectangle", "text" -> "Text"};
