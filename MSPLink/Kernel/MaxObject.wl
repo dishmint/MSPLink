@@ -6,7 +6,7 @@ Needs["PacletTools`"];
 (* ::Section:: *)
 (*MaxObject*)
 
-$MaxObjectImage = PacletExtensionFiles[PacletObject["FaizonZaman/MSPLink"], "Assets"] // Values/*Flatten/*Select[StringEndsQ["max_object.png"]]/*First // Import;
+$MaxObjectImage = FileNameJoin[{DirectoryName[$InputFileName, 2], "Assets", "max_object.png"}] // Import;
 $MaxObjectIcon = Graphics[{$MaxObjectImage}, ImageSize -> Dynamic[{Automatic, 3.5 CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[Magnification]}]];
 
 (* TODO: #11 Create default MetaInformation for MaxObjects *)

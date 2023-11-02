@@ -3,9 +3,9 @@ BeginPackage["FaizonZaman`MSPLink`MaxPatcher`"]
 Begin["`Private`"]
 Needs["PacletTools`"];
 
-FaizonZaman`MSPLink`$SampleMaxPatcher = PacletExtensionFiles[PacletObject["FaizonZaman/MSPLink"], "Assets"] // Values/*Flatten/*Select[StringEndsQ["seq_2023.maxpat"]]/* First;
+FaizonZaman`MSPLink`$SampleMaxPatcher = FileNameJoin[{DirectoryName[$InputFileName, 2], "Assets", "seq_2023.maxpat"}];
 
-$Max8Logo = PacletExtensionFiles[PacletObject["FaizonZaman/MSPLink"], "Assets"] // Values/*Flatten/*Select[StringEndsQ["Logo_Max_8_software.jpg"]]/*First // Import // RemoveBackground;
+$Max8Logo = FileNameJoin[{DirectoryName[$InputFileName, 2], "Assets", "Logo_Max_8_software.jpg"}] // Import // RemoveBackground;
 $MaxPatcherIcon = Graphics[{$Max8Logo}, ImageSize -> Dynamic[{Automatic, 3.5 CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[Magnification]}]];
 
 $MaxVersionTemplate = StringTemplate["`major`.`minor`.`revision`"];
